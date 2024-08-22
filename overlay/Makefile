@@ -1,22 +1,18 @@
-SRC := $(wildcard *.cpp)
-OBJ := $(SRC:%.cpp=%.o)
+SRC := seal.c
+OBJ := $(SRC:%.c=%.o)
 
-CPPFLAGS := -MMD -MP
-CFLAGS   := -Wall `pkg-config --cflags freetype2`
-LDFLAGS  :=
-
-# TODO: remove libs that are notneeded
-LDLIBS   := -lX11 -lXext -lXfixes -lXrandr -lXft -lfreetype
+CFLAGS=-Wall $$(pkg-config --cflags gtk+-2.0)
+LDFLAGS := $$(pkg-config --libs gtk+-2.0)
 
 .PHONY: all clean
 
-all: overlay
+all: halifaxseal
 
-overlay: $(OBJ)
-	$(CXX) $(LDFLAGS) $^ $(LDLIBS) -o $@
+halifaxseal: $(OBJ)
+	$(CC) $(LDFLAGS) $^ -o $@
 
-%.o: %.cpp
-	$(CXX) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) -r overlay *.o *.d
+	@$(RM) -r halifaxseal *.o *.d
