@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 import http.server, urllib.parse, threading, string, time, sys, socketserver, hashlib
+import random
 
 token = 'r3m7oafMN38vjYbn'
 path = '/ches24'
 adminpath = '/636bca3b39fd4defc3f17070030f4547'
 
+
+prefix = random.randrange(2**256)
+prefix = hex(prefix)
+print(f"PoW prefix: {prefix}")
+
 powbits = 18
 nonces = set()
 def check_pow(s):
+    s = prefix + s
     h = int.from_bytes(hashlib.sha256(s.encode()).digest(), 'little')
     if h % 2**powbits:
         return False
@@ -26,13 +33,14 @@ code = '''
     var random;
     the_form.addEventListener('submit', (event) => submitPow(event));
     function sha256(str) {
-        var buffer = new TextEncoder("utf-8").encode(str)
+        str = 'POWPREFIX' + str;
+        var buffer = new TextEncoder("utf-8").encode(str);
         return crypto.subtle.digest("SHA-256", buffer).then(function(hash) {
             return hash
         })
     }
 
-    function randombytes(length) {
+    function randomchars(length) {
         var result           = '';
         var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var charactersLength = characters.length;
@@ -49,7 +57,7 @@ code = '''
         the_button.setAttribute('disabled', '');
         the_result.innerHTML = "<b>Computing PoW. please wait</b>";
         do {
-            random = randombytes(32);
+            random = randomchars(32);
             hash = await sha256(random);
         } while (!isSmall(hash));
         
@@ -63,7 +71,7 @@ code = '''
     }
     findSolution();
 
-'''.replace("POW_MASK", hex(2**powbits-1)).strip()
+'''.replace("POW_MASK", hex(2**powbits-1)).replace("POWPREFIX", prefix).strip()
 
 
 form = f'''
@@ -77,7 +85,7 @@ form = f'''
         <noscript style="margin-bottom:1ex;font-weight:bold;color:red">This needs JavaScript.</noscript>
         <form id="the_form" action="javascript:void(0)">
             <div id="the_result"></div>
-            <input type="submit" id="the_button" value="Call the angry seals!!!"/ style="min-width: 400px; min-height:100px;>
+            <input type="submit" id="the_button" value="Call the angry seals!!!"/ style="min-width: 400px; min-height:100px;">
         </form>
 
         <script>
