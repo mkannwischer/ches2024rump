@@ -6,7 +6,7 @@ static gboolean expose(GtkWidget *widget, GdkEventExpose *event, gpointer user_d
 
 static int x = 0;
 static int y = 0;
-static char str[4];
+static char str[10];
 #define IMAGE_WIDTH 200
 #define IMAGE_HEIGHT 200
 
@@ -15,7 +15,7 @@ int main(int argc, char **argv)
     gtk_init(&argc, &argv);
     if (argc != 2)
         return 0;
-    strncpy(str, argv[1], 4);
+    strncpy(str, argv[1], 10);
 
     GtkWidget *window = gtk_window_new(GTK_WINDOW_POPUP);
     GdkScreen *screen = gtk_widget_get_screen(window);
