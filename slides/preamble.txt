@@ -1,0 +1,36 @@
+\documentclass[18pt,aspectratio=169]{beamer}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{background canvas}{bg=}
+\def\blue#1{{\pdfliteral{0 0 1 rg}#1\pdfliteral{0 0 0 1 k}}}
+\usepackage{import}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{mathtools}
+\usepackage{pdfpages}
+
+\newcommand{\pagepdf}[2][YYY] {
+\begin{frame}[plain]
+        \begin{tikzpicture}[remember picture,overlay]
+            \node[at=(current page.center)] {
+                \includegraphics[width=\paperwidth,#1]{#2}
+            };
+        \end{tikzpicture}
+     \end{frame}
+}
+
+\title{\huge CHES 2024 Rump Session}
+\author{Co-Chairs: {\bf Shivam Bhasin} and {\bf Matthias J. Kannwischer}}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+
+
+
+
+
