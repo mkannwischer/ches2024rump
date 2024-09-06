@@ -2,6 +2,7 @@
 import http.server, urllib.parse, threading, string, time, sys, socketserver, hashlib
 import random
 
+# XXX: You probably want to use fresh random values for each rump session
 token = 'r3m7oafMN38vjYbn'
 path = '/ches24'
 adminpath = '/636bca3b39fd4defc3f17070030f4547'
