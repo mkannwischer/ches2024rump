@@ -1,0 +1,289 @@
+{
+    "config": {
+        "default_talk_minutes": 4,
+        "default_track_locations": [
+            {
+                "name": "Enter a location"
+            }
+        ],
+        "timezone": {
+            "abbr": "America/Halifax",
+            "name": "America/Halifax",
+            "shortName": "Halifax"
+        },
+        "unassigned_talks": [
+            {
+                "id": "category-0",
+                "name": "Uncategorized",
+                "talks": []
+            }
+        ],
+        "uniqueIDIndex": 3329
+    },
+    "database_id": 3329,
+    "name": "CHES 2024 Rump Session",
+    "tabbedSessions": false,
+    "twoSessions": false,
+    "days": [
+        {
+            "date": "2024-09-06",
+            "timeslots": [
+                {
+                    "starttime": "20:00",
+                    "endtime": "20:45",
+                    "sessions": [
+                        {
+                            "id": "rump-session-1",
+                            "session_title": "Reports & Awards",
+                            "talks": [
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Matthias Kannwischer",
+                                        "Shivam Bhasin"
+                                    ],
+                                    "id": "talk-0",
+                                    "title": "Rump Session Opening"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Bo-Yin Yang",
+                                        "Francisco Rodriguez"
+                                    ],
+                                    "id": "talk-1",
+                                    "title": "Program Chairs' Report"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Benedikt Gierlichs"
+                                    ],
+                                    "id": "talk-2",
+                                    "title": "General Announcement"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Markku-Juhani O. Saarinen"
+                                    ],
+                                    "id": "talk-3",
+                                    "title": "Artifact Chair Report & Awards"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Aleksei Udovenko"
+                                    ],
+                                    "id": "talk-4",
+                                    "title": "CHES Challenge (WhibOx) - Technical Wrap-up and Award"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "starttime": "20:45",
+                    "endtime": "21:10",
+                    "sessions": [
+                        {
+                            "id": "rump-session-2",
+                            "session_title": "Break"
+                        }
+                    ]
+                },
+                {
+                    "starttime": "21:10",
+                    "endtime": "21:40",
+                    "sessions": [
+                        {
+                            "id": "rump-session-3",
+                            "session_title": "Let's get serious",
+                            "talks": [
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Matthias Kannwischer",
+                                        "Shivam Bhasin"
+                                    ],
+                                    "id": "talk-0",
+                                    "title": "Real Rump Session Opening"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Jasper van Woudenberg"
+                                    ],
+                                    "id": "talk-1",
+                                    "title": "Don't hack hardware"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Patrick Schaumont"
+                                    ],
+                                    "id": "talk-2",
+                                    "title": "tiny simon"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Marno van der Maas"
+                                    ],
+                                    "id": "talk-3",
+                                    "title": "We <3 LEDs"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Dom Rizzo"
+                                    ],
+                                    "id": "talk-4",
+                                    "title": "OpenTitan After All (this time)"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Morgane Guerreau"
+                                    ],
+                                    "id": "talk-5",
+                                    "title": "Side Channel Attacks: Artificial Intelligence Vs Human Intelligence"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Bo-Yin Yang"
+                                    ],
+                                    "id": "talk-6",
+                                    "title": "Wanted AGAIN: Postdoc(s) and your vote(s)"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "starttime": "21:40",
+                    "endtime": "22:00",
+                    "sessions": [
+                        {
+                            "id": "rump-session-4",
+                            "session_title": "Break"
+                        }
+                    ]
+                },
+                {
+                    "starttime": "22:00",
+                    "endtime": "22:45",
+                    "sessions": [
+                        {
+                            "id": "rump-session-5",
+                            "session_title": "Let's get more serious",
+                            "talks": [
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Colin O'Flynn"
+                                    ],
+                                    "id": "talk-0",
+                                    "title": "New Records in Hardware S-Box Gate Count"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Dev Manish Mehta",
+                                        "Evan Apinis",
+                                        "Trey Marcantonio"
+                                    ],
+                                    "id": "talk-1",
+                                    "title": "Optimist OSE: The Fellowship of the Code"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Jan Jancar"
+                                    ],
+                                    "id": "talk-2",
+                                    "title": "Ask your doctor about sec-certs"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Diego F. Aranha"
+                                    ],
+                                    "id": "talk-3",
+                                    "title": "A Game of Visas"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Thomas Eisenbarth"
+                                    ],
+                                    "id": "talk-4",
+                                    "title": "On Non Constant-time Nonces"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Markku-Juhani Saarinen",
+                                        "Nicky Mouha"
+                                    ],
+                                    "id": "talk-5",
+                                    "title": "Hey it's 1999 again"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Ruben Niederhagen"
+                                    ],
+                                    "id": "talk-6",
+                                    "title": "PQCrypto 2025"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Victor Lomn\u00e9"
+                                    ],
+                                    "id": "talk-7",
+                                    "title": "EUCLEAK : Story of a Side-Channel Vulnerability"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Antoon Purnal"
+                                    ],
+                                    "id": "talk-8",
+                                    "title": "Future-proof cryptography"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Pascal Sasdrich"
+                                    ],
+                                    "id": "talk-9",
+                                    "title": "1st Edition of the CASCADE Conference"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Georg Land"
+                                    ],
+                                    "id": "talk-10",
+                                    "title": "The PhD Student"
+                                },
+                                {
+                                    "affiliations": "",
+                                    "authors": [
+                                        "Matthias Kannwischer",
+                                        "Shivam Bhasin"
+                                    ],
+                                    "id": "talk-11",
+                                    "title": "Rump Session Closing & Awards"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
